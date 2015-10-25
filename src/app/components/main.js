@@ -4,7 +4,7 @@ import React from 'react';
 import mui from 'material-ui';
 let RaisedButton = mui.RaisedButton;
 let AppBar = mui.AppBar;
-let ThemeManager = new mui.Styles.ThemeManager();
+
 let Colors = mui.Styles.Colors;
 
 import Switcher from './socket/switcher';
@@ -13,22 +13,9 @@ import ChartPanel from './charts/ChartPanel'
 let List = mui.List;
 let ListItem = mui.ListItem;
 
-class Main {
-
-  getChildContext() {
-    return {
-      muiTheme: ThemeManager.getCurrentTheme()
-    };
-  }
-
-  componentWillMount() {
-    ThemeManager.setPalette({
-      accent1Color: Colors.deepOrange500
-    });
-  }
+class Main extends React.Component {
 
   render() {
-
     this.mainContainerStyle = {
       position:'absolute',
       left:'250px'
@@ -42,9 +29,7 @@ class Main {
       width:'250px',
       top:'100px',
     }
-
     return (
-
       <div>
         <List style={this.sideBarStyle} >
           <ListItem primaryText="Stock1" />
@@ -60,21 +45,15 @@ class Main {
           <RaisedButton label="Super Secret Password" primary={true} onTouchTap={this._handleTouchTap} />
           <ChartPanel />
         </div>
-
-        
       </div>
     );
   }
-
   _handleTouchTap() {
     alert('1-2-3-4-5');
   }
-
 }
 
 Main.childContextTypes = {
   muiTheme: React.PropTypes.object
 }
-
-
 module.exports = Main;
