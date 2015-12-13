@@ -1,10 +1,10 @@
 {
-  "name": "statistic-client",
+  "name": "donate",
   "version": "0.0.1",
-  "description": "Statistic Client",
+  "description": "Donate",
   "main": ".src/app/app.jsx",
   "scripts":{
-
+    "start":"webpack-dev-server --progress --colors --port=9090"
   },
   "repository": {
     "type": "git",
