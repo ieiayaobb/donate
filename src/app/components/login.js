@@ -2,27 +2,20 @@ import React from 'react';
 
 import {Panel, Button, ButtonToolbar, Input} from 'react-bootstrap';
 
-class Login extends React.Component{
-  render() {
-    var loginPanelWrapperStyle = {
-      width: '100%',
-      height: '100%'
-    }
-    var loginPanelStyle = {
-      width: '400px',
-      height: '300px',
-      position: 'absolute',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)'
-    }
+require("./login.css")
 
+export default class Login extends React.Component{
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
     const title = (
       <h3>Login Form</h3>
     );
     const loginPanel = (
-      <div style={loginPanelWrapperStyle}>
-        <Panel header={title} bsStyle="primary" style={loginPanelStyle}>
+      <div class="loginPanelWrapper">
+        <Panel header={title} bsStyle="primary" class="loginPanel">
           <form>
             <Input type="email" label="Username" placeholder="Username" />
             <Input type="password" label="Password" placeholder="Password"/>
@@ -38,4 +31,3 @@ class Login extends React.Component{
     return(loginPanel)
   }
 }
-module.exports = Login;
