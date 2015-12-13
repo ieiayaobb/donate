@@ -3,10 +3,10 @@ var path = require('path')
 module.exports = {
 	entry: "./src/app/app.js",
 	module: {
-		loaders: [
-			{ test: /\.css$/, include: new RegExp('app'), loader: 'style-loader!css-loader' },
-			{ test: /\.js$/, include: new RegExp('app|bower_components'), loader: 'babel-loader?optional=es7.classProperties'}
-		]
+		loaders:[
+      { test: /\.css$/, include: path.resolve(__dirname, 'src/app'), loader: 'style-loader!css-loader' },
+      { test: /\.js[x]?$/, include: path.resolve(__dirname, 'src/app'), exclude: /node_modules/, loader: 'babel-loader' },
+    ]
 	},
 	output:{
 		filename: './build/app.js',
@@ -14,12 +14,6 @@ module.exports = {
 	},
 	devtool: 'source-map',
 	resolve: {
-    	extensions: ['', '.js'] ,
-    	alias:{
-    		echarts$: path.join(__dirname, "./bower_components/echarts/src/echarts.js"),
-            echarts: path.join(__dirname, "./bower_components/echarts/src"),
-            zrender$: path.join(__dirname, "./bower_components/zrender/src/zrender.js"),
-            zrender: path.join(__dirname, "./bower_components/zrender/src")
-    	}
+    	extensions: ['', '.js']
   	}
 }

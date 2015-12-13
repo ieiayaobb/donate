@@ -1,6 +1,5 @@
 let echarts = require('echarts')
 let React = require('react');
-let zrender = require('zrender');
 require('echarts/chart/bar');
 
 class ChartPanel extends React.Component {
@@ -34,9 +33,9 @@ class ChartPanel extends React.Component {
 	        ]
 	    };
 	}
-                    
+
 	componentWillMount() {
-	    
+
 	}
 
 	componentDidMount() {

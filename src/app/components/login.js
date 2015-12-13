@@ -14,8 +14,8 @@ export default class Login extends React.Component{
       <h3>Login Form</h3>
     );
     const loginPanel = (
-      <div class="loginPanelWrapper">
-        <Panel header={title} bsStyle="primary" class="loginPanel">
+      <div className="loginPanelWrapper">
+        <Panel header={title} bsStyle="primary" className="loginPanel">
           <form>
             <Input type="email" label="Username" placeholder="Username" />
             <Input type="password" label="Password" placeholder="Password"/>

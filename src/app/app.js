@@ -1,5 +1,4 @@
-
-import React from 'react'
+import React from 'react';
 
 // First we import some components...
 import { Router, Route, Link } from 'react-router'
