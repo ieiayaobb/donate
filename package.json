@@ -54,6 +54,17 @@
     "style-loader": "~0.13.0",
     "sass-loader": "~3.1.2"
   },
+  "keywords": [
+    "es6",
+    "webpack",
+    "react",
+    "react-bootstrap",
+    "sass",
+    "echarts",
+    "socket.io",
+    "material-ui",
+    "react-router"
+  ],
   "pre-commit": [
     "lint",
     "test"
