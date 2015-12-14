@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Panel, Button, ButtonToolbar, Input} from 'react-bootstrap';
 
-require("./login.css")
+require("./login.scss")
 
 export default class Login extends React.Component{
   constructor(props) {

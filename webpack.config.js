@@ -4,8 +4,22 @@ module.exports = {
 	entry: "./src/app/app.js",
 	module: {
 		loaders:[
-      { test: /\.css$/, include: path.resolve(__dirname, 'src/app'), loader: 'style-loader!css-loader' },
-      { test: /\.js[x]?$/, include: path.resolve(__dirname, 'src/app'), exclude: /node_modules/, loader: 'babel-loader' },
+			{
+				test: /\.scss$/,
+				include: path.resolve(__dirname, 'src/app'),
+				loader: 'style-loader!css-loader!sass-loader'
+			},
+      {
+				test: /\.css$/,
+				include: path.resolve(__dirname, 'src/app'),
+				loader: 'style-loader!css-loader'
+			},
+      {
+				test: /\.js[x]?$/,
+				include: path.resolve(__dirname, 'src/app'),
+				exclude: /node_modules/,
+				loader: 'babel-loader'
+			},
     ]
 	},
 	output:{
