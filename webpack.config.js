@@ -1,7 +1,7 @@
 var path = require('path')
 
 module.exports = {
-	entry: "./src/app/app.js",
+	entry: "./src/app/app.jsx",
 	module: {
 		loaders:[
 			{
